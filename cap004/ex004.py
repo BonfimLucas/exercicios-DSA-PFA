@@ -1,11 +1,13 @@
 lista = [0, 1, 2, 3, 4]
-quadrado = []
 
-def elevar_quadrado(list):
-    for i in lista:
-        quadrado.append(i **2 )
+def square(x):
+        return (x**2)
+    
+def cube(x):
+        return (x**3)
 
+funcs = [square, cube]
 
-
-
-
+for i in lista:
+    valor = map(lambda x: x(i), funcs)
+    print(list((valor)))
